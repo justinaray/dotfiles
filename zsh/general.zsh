@@ -10,7 +10,7 @@ alias -g code='~/code'
 
 #Aliases
 #alias ll="ls -laF"
-alias year='cal 2016'
+alias year="cal $(date +'%Y')"
 alias npm-exec='PATH=$(npm bin):$PATH'
 alias code='cd ~/code'
 alias docs='cd ~/Documents'
