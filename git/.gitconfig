@@ -1,0 +1,10 @@
+[core]
+	excludesfiles = ~/.gitignore_global
+	excludesfile = ~/.gitignore_global
+	editor = atom-beta --wait
+[user]
+	name = justinaray
+	email = justin@example.com
+[alias]
+	ll = log --oneline
+	recent = --no-pager log --oneline -20
