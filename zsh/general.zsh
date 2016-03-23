@@ -11,9 +11,12 @@ alias -g code='~/code'
 #Aliases
 #alias ll="ls -laF"
 alias year="cal $(date +'%Y')"
-alias npm-exec='PATH=$(npm bin):$PATH'
 alias code='cd ~/code'
 alias docs='cd ~/Documents'
+
+# Node/NPM Aliases
+alias npm-exec='PATH=$(npm bin):$PATH'
+alias nombom='npm cache clear && bower cache clean && rm -rf node_modules bower_components && npm install && bower install'
 
 #fns
 function title {
