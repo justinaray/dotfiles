@@ -18,6 +18,10 @@ alias docs='cd ~/Documents'
 alias npm-exec='PATH=$(npm bin):$PATH'
 alias nombom='npm cache clear && bower cache clean && rm -rf node_modules bower_components && npm install && bower install'
 
+# Application Aliases
+alias chrome="/Applications/Google\ Chrome.app/Contents/MacOS/Google\ Chrome"
+alias chrome-canary="/Applications/Google\ Chrome\ Canary.app/Contents/MacOS/Google\ Chrome\ Canary"
+
 # fns
 function title {
     echo -en "\e]1;$1\a"
