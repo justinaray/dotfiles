@@ -55,3 +55,7 @@ export M2_HOME=/usr/local/opt/maven
 export M2=$M2_HOME/bin
 #export MAVEN_OPTS=-Xms256m -Xmx1048m -XX:MaxPermSize=312M
 export PATH=$JAVA_HOME/bin:$M2_HOME/bin:$PATH
+
+# Add the specified key to the ssh agent with an 8 hr expiry
+# Don't forget to start the agent with eval "$(ssh-agent -s)"
+alias add-daily-key='ssh-add -t "$((60 * 60 * 8))"'
