@@ -1,10 +1,14 @@
 [core]
-	excludesfiles = ~/.gitignore_global
 	excludesfile = ~/.gitignore_global
-	editor = atom-beta --wait
-[user]
-	name = justinaray
-	email = justin@example.com
+
 [alias]
 	ll = log --oneline
 	recent = --no-pager log --oneline -20
+
+# git configs based on directory structure
+[includeIf "gitdir:~/code/personal/oss/"]
+  path = ~/.gitconfig-personal-oss
+
+# local config for the current dev machine
+[include]
+  path = ~/.gitconfig-custom
