@@ -50,6 +50,7 @@ function titleWin {
 # Node/NPM Aliases
 alias npm-exec='PATH=$(npm bin):$PATH'
 alias nombom='npm cache clear && bower cache clean && rm -rf node_modules bower_components && npm install && bower install'
+alias purge-node-modules='find . -name node_modules -type d | xargs rm -rf'
 
 # NVM
 export NVM_DIR="$HOME/.nvm"
