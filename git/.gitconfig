@@ -1,6 +1,10 @@
 [core]
 	excludesfile = ~/.gitignore_global
 
+[user]
+    # Force user config to avoid commits with invalid author
+    useConfigOnly = true
+
 [alias]
 	ll = log --oneline
 	recent = --no-pager log --oneline -20
