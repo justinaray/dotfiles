@@ -64,7 +64,11 @@ export NVM_DIR="$HOME/.nvm"
 source /usr/local/share/zsh/site-functions/_aws
 
 # JAVA Stuff
-export JAVA_HOME=/Library/Java/Home
+# Assumes a jdk8 symlink to an https://adoptopenjdk.net/index.html DL in ~/opt/java
+export JAVA_HOME=~/opt/java/jdk8/Contents/Home
+# Default macOS installer locations
+# export JAVA_HOME=/Library/Java/JavaVirtualMachines/{javaVersion}/Contents/Home
+# export JAVA_HOME=/Library/Java/Home
 export M2_HOME=/usr/local/opt/maven
 export M2=$M2_HOME/bin
 #export MAVEN_OPTS=-Xms256m -Xmx1048m -XX:MaxPermSize=312M
