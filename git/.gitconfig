@@ -8,6 +8,8 @@
 [alias]
 	ll = log --oneline
 	recent = --no-pager log --oneline -20
+	rm-merged = "!git branch --merged | grep -v '\\*\\|develop\\|master' | xargs -n 1 git branch -d"
+	rm-merged-dryrun = "!git branch --merged | grep -v '\\*\\|develop\\|master' | xargs -n 1 echo"
 
 # git configs based on directory structure
 [includeIf "gitdir:~/code/personal/oss/"]
