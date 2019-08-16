@@ -64,15 +64,19 @@ export NVM_DIR="$HOME/.nvm"
 source /usr/local/share/zsh/site-functions/_aws
 
 # JAVA Stuff
-# Assumes a jdk8 symlink to an https://adoptopenjdk.net/index.html DL in ~/opt/java
-export JAVA_HOME=~/opt/java/jdk8/Contents/Home
+# Assumes a jdk11 symlink to an https://adoptopenjdk.net/index.html DL in ~/opt/java
+export JAVA_HOME=~/opt/java/jdk11/Contents/Home
 # Default macOS installer locations
 # export JAVA_HOME=/Library/Java/JavaVirtualMachines/{javaVersion}/Contents/Home
 # export JAVA_HOME=/Library/Java/Home
+export PATH=$JAVA_HOME/bin:$PATH
+
+# Maven Stuff
+# Assumes maven has been installed with HomeBrew
 export M2_HOME=/usr/local/opt/maven
 export M2=$M2_HOME/bin
 #export MAVEN_OPTS=-Xms256m -Xmx1048m -XX:MaxPermSize=312M
-export PATH=$JAVA_HOME/bin:$M2_HOME/bin:$PATH
+export PATH=$M2_HOME/bin:$PATH
 
 # Groovy Stuff
 export GROOVY_HOME=/usr/local/opt/groovy/libexec
