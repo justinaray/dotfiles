@@ -26,6 +26,7 @@ export LESS='--ignore-case --quit-if-one-screen --no-init --hilite-unread -R'
 ## Util Aliases
 #alias ll="ls -laF"
 alias year="cal $(date +'%Y')"
+alias newUuid="uuidgen | tr '[:upper:]' '[:lower:]'"
 
 ## Common Directory Aliases
 alias mycode='cd ~/code'
