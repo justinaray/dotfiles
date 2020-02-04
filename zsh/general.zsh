@@ -71,6 +71,9 @@ export JAVA_HOME=~/opt/java/jdk11/Contents/Home
 # export JAVA_HOME=/Library/Java/JavaVirtualMachines/{javaVersion}/Contents/Home
 # export JAVA_HOME=/Library/Java/Home
 export PATH=$JAVA_HOME/bin:$PATH
+# Alias eclipse to set decent memory options and log redirection
+# Assumes eclipse installed with `brew cask install eclipse-java`
+# alias eclipse="nohup /Applications/Eclipse\ Java.app/Contents/MacOS/eclipse -vmargs -Xms512m -Xmx1024m -XX:PermSize=256m -XX:MaxPermSize=512m > '$TMPDIR/eclipseLog.txt' 2>&1 &"
 
 # Maven Stuff
 # Assumes maven has been installed with HomeBrew
