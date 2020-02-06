@@ -11,7 +11,9 @@ This repo isn't nearly as fancy as most.  It's mostly just a personal backup and
 # Setup
 
 * Clone the repo to a local directory, e.g. ~/code/personal/oss/dotfiles
-* ln -s ~/code/personal/oss/dotfiles/zsh/general.zsh ~/.oh-my-zsh/custom/general.zsh
+* Setup ZSH
+  * ln -s ~/code/personal/oss/dotfiles/zsh/general.zsh ~/.oh-my-zsh/custom/general.zsh
+  * ln -s ~/code/personal/oss/dotfiles/zsh/macOs.zsh ~/.oh-my-zsh/custom/macOs.zsh
 * ln -s ~/code/personal/oss/dotfiles/vim/.vimrc ~/.vimrc
 * ln -s ~/code/personal/oss/dotfiles/git/.gitignore_global ~/.gitignore_global
 * ln -s ~/code/personal/oss/dotfiles/git/.gitconfig ~/.gitconfig
