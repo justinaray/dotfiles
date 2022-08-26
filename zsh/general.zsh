@@ -48,6 +48,9 @@ function titleWin {
     echo -en "\e]2;$1\a"
 }
 
+# Homebrew settings
+export HOMEBREW_NO_ANALYTICS=1
+
 # Node/NPM Aliases
 alias npm-exec='PATH=$(npm bin):$PATH'
 alias nombom='npm cache clear && bower cache clean && rm -rf node_modules bower_components && npm install && bower install'

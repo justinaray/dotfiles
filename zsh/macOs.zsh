@@ -10,3 +10,7 @@ elif [ -L "$HOME/tmp" ] && [ -d "$HOME/tmp" ]; then
   fi
 fi
 
+# Finder Settings
+defaults write com.apple.finder AppleShowAllFiles YES
+defaults write com.apple.finder ShowPathbar 1
+defaults write com.apple.finder ShowStatusBar 1
