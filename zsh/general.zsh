@@ -49,6 +49,7 @@ function titleWin {
 }
 
 # Homebrew settings
+homebrewRoot=`brew --prefix`
 export HOMEBREW_NO_ANALYTICS=1
 
 # Node/NPM Aliases
@@ -58,18 +59,36 @@ alias purge-node-modules='find . -name node_modules -type d | xargs rm -rf'
 
 # NVM
 export NVM_DIR="$HOME/.nvm"
-[ -s "/usr/local/opt/nvm/nvm.sh" ] && . "/usr/local/opt/nvm/nvm.sh"  # This loads nvm
-[ -s "/usr/local/opt/nvm/etc/bash_completion" ] && . "/usr/local/opt/nvm/etc/bash_completion"  # This loads nvm bash_completion
+[ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"  # This loads nvm
+[ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"  # This loads nvm bash_completion
 
 # Yarn
 #PATH="$PATH:`yarn global bin`"
 
+# Browser/Testing Setup
+# Set chromium to dev channel and latest dev version
+# Generally can be used when a specific version of chromium is needed
+# Also used by ember-chromium to existence check and download chromium for Ember testing
+export CHROMIUM_CHANNEL=dev
+# Pull the latest version of chromium for mac on the $CHROMIUM_CHANNEL
+export CHROMIUM_VERSION=$(curl "https://omahaproxy.appspot.com/mac?channel=${CHROMIUM_CHANNEL}")
+
+# Playwright Testing
+export PLAYWRIGHT_BROWSERS_PATH="$HOME/opt/pw-browsers"
+
 # Completion
-source /usr/local/share/zsh/site-functions/_aws
+# AWS
+awsBrewPath=`brew --prefix awscli`
+if [ -d "$awsBrewPath" ]
+then
+    source "${awsBrewPath}/share/zsh/site-functions/_aws"
+else
+    echo "Cannot locate awscli; Ignoring setting up autocomplete"
+fi
 
 # JAVA Stuff
-# Assumes a jdk11 symlink to an https://adoptopenjdk.net/index.html DL in ~/opt/java
-export JAVA_HOME=~/opt/java/jdk11/Contents/Home
+# Assumes a jdk18 symlink to an https://adoptopenjdk.net/index.html DL in ~/opt/java
+export JAVA_HOME="$HOME/opt/java/jdk18/Contents/Home"
 # Default macOS installer locations
 # export JAVA_HOME=/Library/Java/JavaVirtualMachines/{javaVersion}/Contents/Home
 # export JAVA_HOME=/Library/Java/Home

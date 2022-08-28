@@ -10,6 +10,10 @@ elif [ -L "$HOME/tmp" ] && [ -d "$HOME/tmp" ]; then
   fi
 fi
 
+# Terminal Settings
+# Close the terminal window if the shell exits cleanly
+defaults write com.apple.Terminal shellExitAction 1
+
 # Finder Settings
 defaults write com.apple.finder AppleShowAllFiles YES
 defaults write com.apple.finder ShowPathbar 1
