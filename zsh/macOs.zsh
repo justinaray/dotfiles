@@ -18,3 +18,7 @@ defaults write com.apple.Terminal shellExitAction 1
 defaults write com.apple.finder AppleShowAllFiles YES
 defaults write com.apple.finder ShowPathbar 1
 defaults write com.apple.finder ShowStatusBar 1
+
+# Press and Hold (Extended Characters Popup)
+# Disable Press and Hold in VS Code
+defaults write com.microsoft.VSCode ApplePressAndHoldEnabled -bool false

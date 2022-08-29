@@ -81,7 +81,7 @@ export PLAYWRIGHT_BROWSERS_PATH="$HOME/opt/pw-browsers"
 awsBrewPath=`brew --prefix awscli`
 if [ -d "$awsBrewPath" ]
 then
-    source "${awsBrewPath}/share/zsh/site-functions/_aws"
+    complete -C '${awsBrewPath}/bin/aws_completer' aws
 else
     echo "Cannot locate awscli; Ignoring setting up autocomplete"
 fi
